@@ -6,7 +6,7 @@ import (
 )
 
 func Runner(input string, result []string)  {
-	words := strings.Split( input,"\\n")
+	words := strings.Split( input,"\n")
 	for _, word := range words {
 		if word == ""{
 			fmt.Println()

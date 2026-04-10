@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func validator(arguments []string) bool {
@@ -15,7 +16,7 @@ func validator(arguments []string) bool {
 	return true
 }
 func readFile() (string, error) {
-	content, err := os.ReadFile("standard.txt")
+	content, err := os.ReadFile("./banner-files/standard.txt")
 
 	if err != nil {
 		fmt.Println("file unreadable")
@@ -24,13 +25,15 @@ func readFile() (string, error) {
 	return string(content), nil
 }
 
-func main() {
-	arguments := os.Args[1:]
+ func main() {
+arguments := os.Args[1:]
 
-	if !validator(arguments) {
-		return
-	}
-	content, _ := readFile()
+if !validator(arguments) {
+	return
+}
+content, _ := readFile()
+input := arguments[0]
+result := strings.Split(string(content), "\n")
 
-	fmt.Print(content)
+Runner(input, result)
 }
