@@ -6,7 +6,11 @@ import (
 )
 
 func Runner(input string, result []string)  {
-	words := strings.Split( input,"\n")
+	if input == "\\n" {
+		fmt.Println()
+		return
+	}
+	words := strings.Split( input,"\\n")
 	for _, word := range words {
 		if word == ""{
 			fmt.Println()
@@ -20,7 +24,7 @@ func Runner(input string, result []string)  {
 				startLine := (int(char)-32)* 9 + 1 
 				fmt.Print(result[startLine+i])			
 			}
-			fmt.Println()
+			//fmt.Println()
 		}
 	}
 }
