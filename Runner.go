@@ -24,7 +24,7 @@ func Runner(input string, result []string)  {
 				startLine := (int(char)-32)* 9 + 1 
 				fmt.Print(result[startLine+i])			
 			}
-			//fmt.Println()
+			fmt.Println()
 		}
 	}
 }
