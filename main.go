@@ -34,8 +34,6 @@ if !validator(arguments) {
 content, _ := readFile()
 
 input := arguments[0]
- input = strings.ReplaceAll(input, "\n", "\n")
-
 result := strings.Split(string(content), "\n")
 
 Runner(input, result)
