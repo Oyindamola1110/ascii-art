@@ -25,8 +25,8 @@ func readFile() (string, error) {
 	return string(content), nil
 }
 
- func main() {
-arguments := os.Args[1:]
+func main() {
+  arguments := os.Args[1:]
 
 if !validator(arguments) {
 	return
