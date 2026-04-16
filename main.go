@@ -8,6 +8,7 @@ import (
 
 func validator(arguments []string) bool {
 	if len(arguments) != 1 {
+		fmt.Println("Usage: go run .[STRING]")
 		return false
 	}
 	if arguments[0] == "" {
