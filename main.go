@@ -7,7 +7,7 @@ import (
 )
 
 func validator(arguments []string) bool {
-	if len(arguments) < 1 {
+	if len(arguments) != 1 {
 		return false
 	}
 	if arguments[0] == "" {
